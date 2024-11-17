@@ -285,7 +285,11 @@ def get_building_average_data(building_id):
     filtered_data = get_filtered_data(building_id)
     if filtered_data is None:
         return jsonify({"error": f"No data found for Building ID {building_id}."}), 404
-
+    
+    # Get the first row since building details are the same for all rows
+    building_row = filtered_data.iloc[0]
+    
+    # Convert NumPy values to native Python types
     average_data = filtered_data.agg({
         'Energy Consumption (kWh)': 'mean',
         'Occupancy (People)': 'mean',
@@ -295,25 +299,29 @@ def get_building_average_data(building_id):
         'Water Usage (Gallons)': 'mean'
     }).to_dict()
 
-    building_info = filtered_data.iloc[0][['Building Name', 'Location', 'Description']].to_dict()
     response = {
-        "Building ID": building_id,
-        "Building Name": building_info['Building Name'],
-        "Location": building_info['Location'],
-        "Description": building_info['Description'],
-        "Averages": {k: round(v, 2) for k, v in average_data.items()}
+        "Building ID": int(building_id),
+        "Building Name": str(building_row['Building Name']),
+        "Location": str(building_row['Location']),
+        "Description": str(building_row['Description']),
+        "squareFootage": int(building_row['Square Footage']),
+        "address": str(building_row['Address']),
+        "yearBuilt": int(building_row['Year Built']),
+        "floors": int(building_row['Number of Floors']),
+        "Averages": {k: float(round(v, 2)) for k, v in average_data.items()}
     }
-
+    print(response)
     return jsonify(response)
 
 @app.route('/buildings', methods=['GET'])
 def get_all_buildings():
     building_summary = df.groupby('Building ID').first().reset_index()
     buildings = building_summary[[
-        'Building ID', 'Building Name', 'Location', 'Latitude', 'Longitude', 'Description'
+        'Building ID', 'Building Name', 'Location', 'Latitude', 'Longitude', 'Description', "Number of Floors","Year Built","Square Footage","Address"
     ]].to_dict(orient='records')
 
     return jsonify(buildings)
 
+
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=3001)

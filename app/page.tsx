@@ -19,7 +19,7 @@ const HomePage = () => {
     const fetchBuildings = async () => {
       try {
         setLoading(true);
-        const response = await fetch("http://127.0.0.1:5000/buildings");
+        const response = await fetch("http://127.0.0.1:3001/buildings");
         if (!response.ok) {
           throw new Error("Failed to fetch buildings");
         }

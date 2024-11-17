@@ -8,10 +8,15 @@ export interface BuildingAverages {
   }
   
   export interface BuildingAverageData {
+    address: string;
+    yearBuilt: number;
+    floors: number;
+    squareFootage: number;
     "Building ID": number;
     "Building Name": string;
     "Location": string;
     "Description": string;
+    "Square Footage": number;
     Averages: BuildingAverages;
   }
   

@@ -21,7 +21,7 @@ const Sidebar: React.FC = () => {
     const fetchBuildings = async () => {
       try {
         setLoading(true);
-        const response = await fetch("http://127.0.0.1:5000/buildings"); 
+        const response = await fetch("http://127.0.0.1:3001/buildings"); 
         if (!response.ok) {
           throw new Error("Failed to fetch buildings data");
         }
@@ -76,7 +76,7 @@ const Sidebar: React.FC = () => {
           <div className="p-4">
             <Link href={`/`} className="hover:text-sky-700">
               <h2 className="text-lg font-semibold mb-4 flex items-center">
-                <FaBuilding className="mr-2" /> Buildings
+                <FaBuilding className="mr-2" /> EcoLens
               </h2>
             </Link>
             <ul>

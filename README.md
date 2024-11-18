@@ -1,4 +1,15 @@
-# Building Sustainability Dashboard
+# HackUTD CBRE/Veolia Building Sustainability Dashboard
+Developed By Sami-ul Ahmed, Aryav Rastogi, Rithvik Ijju
+<br/>
+<div style="display: flex; justify-content: space-around; align-items: center;">
+  <img src="https://github.com/user-attachments/assets/042f770b-d414-45a4-a898-f02a96b07375" alt="Dashboard Screenshot 1" width="400"/>
+  <img src="https://github.com/user-attachments/assets/0ab2ebc8-bc62-4c84-be7f-d37969dc280f" alt="Dashboard Screenshot 2" width="400"/>
+</div>
+
+- This application was made for HackUTD, the second biggest hackathon in the United States
+- It was created in 24 hours to tackle problems of **sustainability in commercial buildings**
+- This application was made to tackle challenges given by the companies ***Veolia and CBRE**
+- This application **won an award from Veolia**
 
 ## Key Features
 1. **Interactive Graphs**:

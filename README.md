@@ -1,4 +1,4 @@
-# HackUTD CBRE/Veolia Building Sustainability Dashboard
+# HackUTD CBRE/Veolia EcoLens: Building Sustainability Dashboard
 Developed By Sami-ul Ahmed, Aryav Rastogi, Rithvik Ijju
 <br/>
 <div style="display: flex; justify-content: space-around; align-items: center;">

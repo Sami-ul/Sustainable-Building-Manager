@@ -6,7 +6,7 @@ Developed By Sami-ul Ahmed, Aryav Rastogi, Rithvik Ijju
   <img src="https://github.com/user-attachments/assets/0ab2ebc8-bc62-4c84-be7f-d37969dc280f" alt="Dashboard Screenshot 2" width="400"/>
 </div>
 
-- This application was made for HackUTD, the second biggest hackathon in the United States
+- This application was made for HackUTD, the largest hackathon in the United States
 - It was created in 24 hours to tackle problems of **sustainability in commercial buildings**
 - This application was made to tackle challenges given by the companies ***Veolia and CBRE**
 - This application **won an award from Veolia**
